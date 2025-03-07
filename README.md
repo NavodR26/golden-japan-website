@@ -1,0 +1,1 @@
+# golden-japan-website
