@@ -263,7 +263,7 @@ const Contact = () => {
               <InfoIcon>📍</InfoIcon>
               <InfoContent>
                 <InfoLabel>Address</InfoLabel>
-                <InfoText>305sanhaitsu Akebono, 5-74 Akebonochō, Toyota, Aichi, Japan, 471-0835</InfoText>
+                <InfoText>305 sanhaitsu Akebono, 5-74 Akebonochō, Toyota, Aichi, Japan, 471-0835</InfoText>
               </InfoContent>
             </InfoItem>
             
@@ -280,7 +280,7 @@ const Contact = () => {
               <InfoIcon>✉️</InfoIcon>
               <InfoContent>
                 <InfoLabel>Email</InfoLabel>
-                <InfoText>info@goldenjapan.com</InfoText>
+                <InfoText>info@goldenjapanllc.com</InfoText>
               </InfoContent>
             </InfoItem>
             
@@ -296,7 +296,7 @@ const Contact = () => {
             
             <Map>
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.940193307792!2d137.1513317!3d35.0836373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a35a24a687f3%3A0x6e22a0ba3ad3a49c!2z5oiQ5a-M5biC5p2x5Lqs6YO944Ki44Kx44Oc44OOIOcuIDUtNzQ!5e0!3m2!1sen!2sjp!4v1646400000000!5m2!1sen!2sjp" 
+                src="https://maps.app.goo.gl/hx4gsa1U9ogYPvN97?g_st=iw" 
                 allowFullScreen="" 
                 loading="lazy" 
                 title="Golden Japan LLC Location"

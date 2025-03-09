@@ -123,12 +123,12 @@ const Footer = () => {
         
         <FooterSection>
           <FooterTitle>Contact Info</FooterTitle>
-          <FooterText>📍 305sanhaitsu Akebono, Toyota, Aichi, Japan 471-0835</FooterText>
+          <FooterText>📍 305 sanhaitsu Akebono, Toyota, Aichi, Japan 471-0835</FooterText>
           <FooterText>📞 +81 90-1277-7733 (Hotline)</FooterText>
           <FooterText>☎️ +81 52-386-1932 (Land Phone)</FooterText>
           <SocialLinks>
             <SocialIcon 
-              href="#" 
+              href="https://www.facebook.com/share/15w2bKY7uh/" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -137,7 +137,7 @@ const Footer = () => {
               📱
             </SocialIcon>
             <SocialIcon 
-              href="#" 
+              href="info@goldenjapanllc.com" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -146,7 +146,7 @@ const Footer = () => {
               📧
             </SocialIcon>
             <SocialIcon 
-              href="#" 
+              href="www.goldenjapanllc.com" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
