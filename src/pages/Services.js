@@ -492,12 +492,7 @@ const Services = () => {
                 <ServiceFeature>Agricultural Machinery (Tractors, Harvesters)</ServiceFeature>
                 <ServiceFeature>Genuine & Aftermarket Parts</ServiceFeature>
               </ServiceFeatures>
-              <ServiceAction
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Learn More
-              </ServiceAction>
+              
             </ServiceContent>
           </ServiceCard>
 
@@ -517,12 +512,7 @@ const Services = () => {
                 <ServiceFeature>Printers & Photocopiers</ServiceFeature>
                 <ServiceFeature>Cameras</ServiceFeature>
               </ServiceFeatures>
-              <ServiceAction
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Learn More
-              </ServiceAction>
+              
             </ServiceContent>
           </ServiceCard>
 
@@ -541,12 +531,7 @@ const Services = () => {
                 <ServiceFeature>Agricultural Machinery</ServiceFeature>
                 <ServiceFeature>Spare Parts & Accessories</ServiceFeature>
               </ServiceFeatures>
-              <ServiceAction
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Learn More
-              </ServiceAction>
+              
             </ServiceContent>
           </ServiceCard>
 
@@ -565,12 +550,7 @@ const Services = () => {
                 <ServiceFeature>Aftermarket Parts</ServiceFeature>
                 <ServiceFeature>Worldwide Shipping</ServiceFeature>
               </ServiceFeatures>
-              <ServiceAction
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Learn More
-              </ServiceAction>
+
             </ServiceContent>
           </ServiceCard>
         </ServicesList>

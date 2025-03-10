@@ -146,7 +146,7 @@ const Footer = () => {
               📧
             </SocialIcon>
             <SocialIcon 
-              href="www.goldenjapanllc.com" 
+              href="goldenjapanllc.com" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}

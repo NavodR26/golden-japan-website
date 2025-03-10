@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser"; // Import EmailJS
 
 const ContactWrapper = styled.div`
   padding: 4rem 0;
@@ -98,20 +99,6 @@ const Map = styled.div`
     width: 100%;
     height: 100%;
     border: none;
-  }
-  
-  &::before {
-    content: "Map loading...";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    color: #ccc;
   }
 `;
 
@@ -222,22 +209,36 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-    }, 1500);
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        formData,
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully!", response);
+          setIsSubmitting(false);
+          setIsSuccess(true);
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+          
+          // Reset success message after 5 seconds
+          setTimeout(() => {
+            setIsSuccess(false);
+          }, 5000);
+        },
+        (error) => {
+          console.error("Failed to send email.", error);
+          setIsSubmitting(false);
+        }
+      );
   };
   
   return (
@@ -296,7 +297,7 @@ const Contact = () => {
             
             <Map>
               <iframe 
-                src="https://maps.app.goo.gl/hx4gsa1U9ogYPvN97?g_st=iw" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.0434900286755!2d137.12467327654505!3d35.05565177279564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60049fe00361b089%3A0x45fee912628bd8c7!2sGOLDEN%20JAPAN%20LLC!5e0!3m2!1sen!2slk!4v1741579259079!5m2!1sen!2slk" 
                 allowFullScreen="" 
                 loading="lazy" 
                 title="Golden Japan LLC Location"

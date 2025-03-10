@@ -121,6 +121,9 @@ const Navbar = () => {
         <NavLink to="/services" className={location.pathname === "/services" ? "active" : ""}>
           Services
         </NavLink>
+        <NavLink to="/gallery" className={location.pathname === "/gallery" ? "active" : ""}>
+          Gallery
+        </NavLink>
         <NavLink to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
           Contact
         </NavLink>
