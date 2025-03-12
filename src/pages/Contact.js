@@ -212,10 +212,10 @@ const Contact = () => {
     // Send email using EmailJS
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        "service_03fk0xg", // Replace with your EmailJS service ID
+        "template_eh19w3g", // Replace with your EmailJS template ID
         formData,
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        "3fVmypP7YNxe9Zvx1" // Replace with your EmailJS public key
       )
       .then(
         (response) => {
