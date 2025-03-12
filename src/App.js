@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import Gallery from "./pages/Gallery"
 import Contact from "./pages/Contact";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
