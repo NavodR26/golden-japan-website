@@ -12,14 +12,15 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "axios": "^1.8.2",
-    "framer-motion": "^10.16.2",
+    "framer-motion": "^10.18.0",
     "frontend": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal-image": "^2.6.0",
     "react-router-dom": "^6.17.0",
     "react-scripts": "^5.0.1",
-    "styled-components": "^6.1.9"
+    "styled-components": "^6.1.9",
+    "yet-another-react-lightbox": "^3.21.8"
   },
   "browserslist": {
     "production": [

@@ -1,57 +1,136 @@
-/* In your Gallery.css file */
+/* Gallery.css - Updated for dark theme */
 .gallery-container {
-  padding: 40px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
 }
 
 .gallery-title {
   text-align: center;
   margin-bottom: 40px;
   font-size: 2.5rem;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  position: relative;
+}
+
+.gallery-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #f0b733, #d98f1a);
+  border-radius: 10px;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .gallery-item {
-  overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 1 / 1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+  background-color: #1a1a1a;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.gallery-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .gallery-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.gallery-image:hover {
-  opacity: 0.9;
+.gallery-zoom-icon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(240, 183, 51, 0.8);
+  border-radius: 50%;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.gallery-zoom-icon svg {
+  stroke: #ffffff;
+}
+
+.gallery-image-container:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+.gallery-image-container:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-image-container:hover .gallery-zoom-icon {
+  transform: scale(1);
 }
 
 /* Loading and error states */
-.gallery-loading,
+.gallery-loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  min-height: 300px;
+}
+
 .gallery-error,
 .gallery-empty {
   text-align: center;
   padding: 50px;
-  font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-  color: #555;
+  color: #999;
+}
+
+.gallery-retry-button {
+  background: linear-gradient(90deg, #f0b733, #d98f1a);
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(240, 183, 51, 0.3);
 }
 
 /* Loading Skeleton */
@@ -64,24 +143,30 @@
   }
 }
 
-.gallery-loading {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.gallery-loading .skeleton-item {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+.skeleton-item {
+  background: linear-gradient(90deg, #222 25%, #333 50%, #222 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: 12px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3/2;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 30px 15px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
   }
 
   .gallery-title {
@@ -90,11 +175,17 @@
 }
 
 @media (max-width: 480px) {
+  .gallery-container {
+    padding: 20px 10px;
+  }
+  
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
   }
 
   .gallery-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
   }
 }

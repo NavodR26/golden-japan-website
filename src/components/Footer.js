@@ -118,6 +118,7 @@ const Footer = () => {
           <FooterTitle>Quick Links</FooterTitle>
           <FooterLink to="/">Home</FooterLink>
           <FooterLink to="/services">Services</FooterLink>
+          <FooterLink to="/gallery">Gallery</FooterLink>
           <FooterLink to="/contact">Contact</FooterLink>
         </FooterSection>
         
