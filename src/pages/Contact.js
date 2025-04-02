@@ -273,7 +273,7 @@ const Contact = () => {
               <InfoContent>
                 <InfoLabel>Phone</InfoLabel>
                 <InfoText>+81 90-1277-7733 (Hotline)</InfoText>
-                <InfoText>+81 52-386-1932 (Land Phone)</InfoText>
+                <InfoText>+81 56-540-9005 (TEL. / FAX)</InfoText>
               </InfoContent>
             </InfoItem>
             

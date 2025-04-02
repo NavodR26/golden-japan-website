@@ -126,7 +126,7 @@ const Footer = () => {
           <FooterTitle>Contact Info</FooterTitle>
           <FooterText>📍 305 sanhaitsu Akebono, Toyota, Aichi, Japan 471-0835</FooterText>
           <FooterText>📞 +81 90-1277-7733 (Hotline)</FooterText>
-          <FooterText>☎️ +81 52-386-1932 (Land Phone)</FooterText>
+          <FooterText>☎️ +81 56-540-9005 (TEL. / FAX)</FooterText>
           <SocialLinks>
             <SocialIcon 
               href="https://www.facebook.com/share/15w2bKY7uh/" 

@@ -208,7 +208,7 @@ const Services = () => {
               <img src="/assets/vehicle-export.jpg" alt="Automotive Sales" />
             </ServiceImage>
             <ServiceContent>
-              <ServiceCardTitle>Automotive Sales, Export & Parts</ServiceCardTitle>
+              <ServiceCardTitle>Domestic Automotive Sales, Export & Parts</ServiceCardTitle>
               <ServiceDescription>
                 We specialize in exporting high-quality Japanese vehicles, machinery, and parts to customers worldwide.
               </ServiceDescription>

@@ -734,7 +734,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Your trusted partner for premium Japanese vehicle exports and quality services
+            Your trusted partner for premium Japanese vehicle exports , Domestic vehicle dealers and quality services
           </HeroSubtitle>
           <Link to="/services">
             <CTAButton
@@ -762,7 +762,7 @@ const Home = () => {
             variants={cardVariants}
           >
             <FeatureIcon>🚗</FeatureIcon>
-            <FeatureTitle>Vehicle Export</FeatureTitle>
+            <FeatureTitle>Domestic Vehicle Dealers and Exports</FeatureTitle>
             <FeatureDescription>
               We specialize in exporting high-quality Japanese vehicles to customers worldwide with transparent pricing and reliable delivery.
             </FeatureDescription>
